@@ -1,0 +1,55 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "strictNullChecks": true,
+    "jsx": "react-native",
+    "lib": ["es6", "esnext", "es2017", "es2019"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "noEmit": true,
+    "strict": true,
+    "target": "ESNext",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "noImplicitAny": true,
+    "types": ["node", "jest", "detox"],
+    "alwaysStrict": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "noFallthroughCasesInSwitch": true,
+    "removeComments": true,
+    "skipDefaultLibCheck": true,
+    "strictFunctionTypes": true,
+    "useUnknownInCatchVariables": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "baseUrl": ".",
+    "paths": {
+      "@e2e/*": ["./e2e/*"],
+      "@CountryScout24/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "src",
+    "index.js",
+    "typings",
+    "app.config.ts",
+    "themes",
+    "e2e",
+    "__mocks__/RefreshControl.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js",
+    ".yarn"
+  ]
+}

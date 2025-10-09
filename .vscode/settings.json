@@ -1,0 +1,5 @@
+{
+  "java.compile.nullAnalysis.mode": "automatic",
+  "cSpell.words": ["appstack", "Pressable"],
+  "java.configuration.updateBuildConfiguration": "automatic"
+}
