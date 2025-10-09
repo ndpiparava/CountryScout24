@@ -1,0 +1,48 @@
+// theme.ts
+export const theme = {
+  colors: {
+    backgroundPrimary: '#191D21',
+    backgroundSecondary: '#1E2327',
+    textPrimary: '#FAFAFC',
+    textSecondary: '#929195',
+    textTertiary: '#6B7280',
+    text: '#1f2937',
+    primary: '#3b82f6',
+    primaryHover: '#272EF5',
+    danger: '#ef4444',
+    border: '#d1d5db',
+    label: '#374151',
+    spinnerTrack: '#E5E7EB',
+    spinner: '#3B82F6',
+    success: '#10B981',
+    satisfactory: '#6EE7B7',
+    warning: '#F59E0B',
+    info: '#6366F1',
+    boarderPrimary: '#2A2D33',
+  },
+  fonts: {
+    body: 'var(--font-body), sans-serif',
+    mono: '"The Sans Plain", monospace',
+  },
+  spacing: (factor: number) => `${8 * factor}`,
+  radii: {
+    sm: '4px',
+    md: '6px',
+    lg: '12px',
+    xlg: '16px',
+  },
+  fontSizes: {
+    sm: '12px',
+    base: '14px',
+    lg: '16px',
+    xl: '20px',
+    xxl: '24px',
+    vxl: '30px',
+  },
+  fontWeights: {
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+  },
+};
