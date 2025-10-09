@@ -1,0 +1,16 @@
+module.exports = {
+  preset: 'ts-jest', // (1)
+  rootDir: '..',
+  testMatch: ['<rootDir>/e2e/**/*.test.ts'], // (2)
+  testTimeout: 120000,
+  maxWorkers: 1,
+  globalSetup: 'detox/runners/jest/globalSetup',
+  globalTeardown: 'detox/runners/jest/globalTeardown',
+  reporters: ['detox/runners/jest/reporter'],
+  testEnvironment: 'detox/runners/jest/testEnvironment',
+  verbose: true,
+  moduleNameMapper: {
+    '^@CountryScout24/(.*)$': '<rootDir>/src/$1',
+    '^@e2e/(.*)$': '<rootDir>/e2e/$1',
+  },
+};
