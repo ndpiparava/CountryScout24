@@ -2,29 +2,30 @@
 
 ---
 
-![Demo video](./src/assets/demo/counrtyscout241.gif 'demo')
+![Demo video](./src/assets/demo/counrtyscout.gif 'demo')
 
 ## Project Structure
 
+
 - **src/components/** – Organized using Atomic Design:
-  - **atoms/** – Basic UI elements like `Button`, `TextInput`, `InputLabel`.
-  - **molecules/** – Composed components like `SelectField`, `CheckboxGroup`.
-  - **organisms/** – Larger sections like `SurveyForm`, `ContactForm`.
-- **src/theme/** – Theme definitions and `ThemeProviderWrapper`.
-- **src/shared/** – Application shared hooks, constants, types, validation and option data.
-- **src/translations/** – Localization files for different languages.
-- **src/stores/** – Local stores (eg. useLocaleStore).
-- **src/types/** – TypeScript type definitions.
-- **src/specs/** – Jest test setup and mocks.
-- **src/appstack/** – Application navigation setup.
-- **src/assets/** – Images, svg.
-- **src/domain/** – Entities, value objects.
-- **src/services/** – APIs, Database, Repositories.
+  - **atoms/** – Basic UI elements like `CountryCapital`, `CountryFlag`.
+  - **molecules/** – Composed components like `CountryItem`, `SearchBar`.
+  - **organisms/** – Larger sections like `CountryList`.
+- **src/theme/** – `Theme` definitions.
+- **src/shared/** – Application shared `hooks`, `constants`, `types`, validation and option data.
+- **src/translations/** – `Localization` files for different languages.
+- **src/stores/** – Local stores (eg. `useLocaleStore`).
+- **src/specs/** – `Jest` test setup and mocks.
+- **src/appstack/** – Application `navigation` setup.
+- **src/assets/** – `Images`, `svg`.
+- **src/domain/** – `Entities`, value objects.
+- **src/services/** – APIs, Database, `Repositories`.
 - **e2e/** – End to end tests.
 
 
+
 ---
-## PreRequites
+## Prerequites
 
 ### Detox setup for E2E tests
 
@@ -87,10 +88,12 @@ npm e2e:ios:test or yarn e2e:ios:test // similar command for android as well
 It separates your app into layers that depend on each other in one direction only — from outer to inner.
 It typically looks like this:
 
+```
 - UI Layer ← React Native components, screens
 - Presentation Layer ← ViewModels, Hooks, State, Controllers
 - Domain Layer ← Entities, Use Cases (pure JS logic)
 - Data Layer (Infra) ← APIs, Database, Repositories
+```
           
 
 ### Atomic Design
@@ -129,7 +132,6 @@ const intl = useIntl();
 
 - `AppWrapper` in `theme/ThemeProviderWrapper.tsx` wraps the entire app.
 - Provides theme and locale context to all components.
-- Handles font setup using `next/font`.
 
 ---
 
