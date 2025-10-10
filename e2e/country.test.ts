@@ -31,11 +31,13 @@ describe('Example', () => {
     //activate search
     await element(by.id(TEST_IDS.SEARCH_BAR)).tap();
 
-   //search
+    //search
     await element(by.id(TEST_IDS.SEARCH_INPUT)).typeText('Denmark');
 
     // check if Denmark is visible
-    await expect(element(by.id(TEST_IDS.COUNTRY_ITEM_ID('Denmark')))).toBeVisible();
+    await expect(
+      element(by.id(TEST_IDS.COUNTRY_ITEM_ID('Denmark'))),
+    ).toBeVisible();
 
     // no results scenario
     await element(by.id(TEST_IDS.SEARCH_INPUT)).clearText();

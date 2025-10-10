@@ -13,9 +13,9 @@
     "prettier:fix": "prettier --write --ignore-unknown .",
     "lint:fix": "yarn prettier:fix && yarn lint --fix",
     "e2e:ios:build": "detox rebuild-framework-cache && detox build -c ios.sim.debug",
-    "e2e:ios:test": "detox test -c ios.sim.debug",
+    "e2e:ios:test": "sh -c 'yarn start & sleep 8 && detox test -c ios.sim.debug'",
     "e2e:android:build": "detox rebuild-framework-cache && detox build -c android.emu.debug",
-    "e2e:android:test": "detox test -c android.emu.debug"
+    "e2e:android:test": "sh -c 'yarn start & sleep 8 && detox test -c android.emu.debug"
   },
   "dependencies": {
     "@emotion/native": "^11.11.0",
