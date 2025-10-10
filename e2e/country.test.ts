@@ -26,4 +26,20 @@ describe('Example', () => {
     }
     await expect(element(by.id(TEST_IDS.COUNTRY_LIST))).toBeVisible();
   });
+
+  it('should filter countries using the search bar', async () => {
+    //activate search
+    await element(by.id(TEST_IDS.SEARCH_BAR)).tap();
+
+   //search
+    await element(by.id(TEST_IDS.SEARCH_INPUT)).typeText('Denmark');
+
+    // check if Denmark is visible
+    await expect(element(by.id(TEST_IDS.COUNTRY_ITEM_ID('Denmark')))).toBeVisible();
+
+    // no results scenario
+    await element(by.id(TEST_IDS.SEARCH_INPUT)).clearText();
+    await element(by.id(TEST_IDS.SEARCH_INPUT)).typeText('NonExistentCountry');
+    await expect(element(by.id(TEST_IDS.NO_COUNTRIES_FOUND))).toBeVisible();
+  });
 });
