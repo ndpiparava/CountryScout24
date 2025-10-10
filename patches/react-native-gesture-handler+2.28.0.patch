@@ -1,0 +1,84 @@
+diff --git a/node_modules/react-native-gesture-handler/android/.project b/node_modules/react-native-gesture-handler/android/.project
+new file mode 100644
+index 0000000..ab9d507
+--- /dev/null
++++ b/node_modules/react-native-gesture-handler/android/.project
+@@ -0,0 +1,23 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<projectDescription>
++	<name>react-native-gesture-handler</name>
++	<comment>Project react-native-gesture-handler created by Buildship.</comment>
++	<projects>
++	</projects>
++	<buildSpec>
++		<buildCommand>
++			<name>org.eclipse.jdt.core.javabuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++		<buildCommand>
++			<name>org.eclipse.buildship.core.gradleprojectbuilder</name>
++			<arguments>
++			</arguments>
++		</buildCommand>
++	</buildSpec>
++	<natures>
++		<nature>org.eclipse.jdt.core.javanature</nature>
++		<nature>org.eclipse.buildship.core.gradleprojectnature</nature>
++	</natures>
++</projectDescription>
+diff --git a/node_modules/react-native-gesture-handler/android/bin/fabric/src/main/java/com/swmansion/gesturehandler/RNGestureHandlerComponentsRegistry.class b/node_modules/react-native-gesture-handler/android/bin/fabric/src/main/java/com/swmansion/gesturehandler/RNGestureHandlerComponentsRegistry.class
+new file mode 100644
+index 0000000..2359270
+Binary files /dev/null and b/node_modules/react-native-gesture-handler/android/bin/fabric/src/main/java/com/swmansion/gesturehandler/RNGestureHandlerComponentsRegistry.class differ
+diff --git a/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerButtonManagerDelegate.class b/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerButtonManagerDelegate.class
+new file mode 100644
+index 0000000..29a343c
+Binary files /dev/null and b/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerButtonManagerDelegate.class differ
+diff --git a/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerButtonManagerInterface.class b/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerButtonManagerInterface.class
+new file mode 100644
+index 0000000..fc4e41f
+Binary files /dev/null and b/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerButtonManagerInterface.class differ
+diff --git a/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerRootViewManagerDelegate.class b/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerRootViewManagerDelegate.class
+new file mode 100644
+index 0000000..d262eb0
+Binary files /dev/null and b/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerRootViewManagerDelegate.class differ
+diff --git a/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerRootViewManagerInterface.class b/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerRootViewManagerInterface.class
+new file mode 100644
+index 0000000..30f593c
+Binary files /dev/null and b/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/facebook/react/viewmanagers/RNGestureHandlerRootViewManagerInterface.class differ
+diff --git a/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/swmansion/gesturehandler/NativeRNGestureHandlerModuleSpec.class b/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/swmansion/gesturehandler/NativeRNGestureHandlerModuleSpec.class
+new file mode 100644
+index 0000000..21079b1
+Binary files /dev/null and b/node_modules/react-native-gesture-handler/android/bin/paper/src/main/java/com/swmansion/gesturehandler/NativeRNGestureHandlerModuleSpec.class differ
+diff --git a/node_modules/react-native-gesture-handler/android/bin/src/main/java/com/swmansion/gesturehandler/core/ScaleGestureDetector$OnScaleGestureListener.class b/node_modules/react-native-gesture-handler/android/bin/src/main/java/com/swmansion/gesturehandler/core/ScaleGestureDetector$OnScaleGestureListener.class
+new file mode 100644
+index 0000000..6b418fb
+Binary files /dev/null and b/node_modules/react-native-gesture-handler/android/bin/src/main/java/com/swmansion/gesturehandler/core/ScaleGestureDetector$OnScaleGestureListener.class differ
+diff --git a/node_modules/react-native-gesture-handler/android/bin/src/main/java/com/swmansion/gesturehandler/core/ScaleGestureDetector$SimpleOnScaleGestureListener.class b/node_modules/react-native-gesture-handler/android/bin/src/main/java/com/swmansion/gesturehandler/core/ScaleGestureDetector$SimpleOnScaleGestureListener.class
+new file mode 100644
+index 0000000..f2f4465
+Binary files /dev/null and b/node_modules/react-native-gesture-handler/android/bin/src/main/java/com/swmansion/gesturehandler/core/ScaleGestureDetector$SimpleOnScaleGestureListener.class differ
+diff --git a/node_modules/react-native-gesture-handler/android/bin/src/main/java/com/swmansion/gesturehandler/core/ScaleGestureDetector.class b/node_modules/react-native-gesture-handler/android/bin/src/main/java/com/swmansion/gesturehandler/core/ScaleGestureDetector.class
+new file mode 100644
+index 0000000..7959adc
+Binary files /dev/null and b/node_modules/react-native-gesture-handler/android/bin/src/main/java/com/swmansion/gesturehandler/core/ScaleGestureDetector.class differ
+diff --git a/node_modules/react-native-gesture-handler/android/build.gradle b/node_modules/react-native-gesture-handler/android/build.gradle
+index ac149a0..2970bff 100644
+--- a/node_modules/react-native-gesture-handler/android/build.gradle
++++ b/node_modules/react-native-gesture-handler/android/build.gradle
+@@ -135,6 +135,14 @@ android {
+         prefab = true
+     }
+ 
++     packagingOptions {
++    pickFirst '**/libfbjni.so'
++    pickFirst '**/libhermes.so'
++    pickFirst '**/libc++_shared.so'
++    pickFirst '**/libjsi.so'
++ }
++
++
+     // Used to override the NDK path/version on internal CI or by allowing
+     // users to customize the NDK path/version from their root project (e.g. for M1 support)
+     if (rootProject.hasProperty("ndkPath")) {
