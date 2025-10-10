@@ -27,6 +27,8 @@
 ---
 ## Prerequites
 
+### Yarn 4.6.0 or greater
+
 ### Detox setup for E2E tests
 
 ```bash
@@ -43,26 +45,26 @@ brew install applesimutils
 
 
 ```bash
-npm install or yarn install
-cd ios && npm pod install or cd ios && yarn pod install
+yarn install
+cd ios && yarn pod install
 ```
 
 ### Check lints and prettier
 
 ```bash
-npm lint:fix or yarn lint:fix
+yarn lint:fix
 ```
 
 ### Run on iOS
 
 ```bash
-npm ios or yarn ios
+yarn ios
 ```
 
 ### Run on Android
 
 ```bash
-npm android or yarn android
+yarn android
 ```
 
 ---
@@ -70,13 +72,13 @@ npm android or yarn android
 ### Run Unit tests
 
 ```bash
-npm test or yarn test
+yarn test
 ```
 
 ### Run End to End tests
 ```bash
-npm e2e:ios:build or yarn e2e:ios:build
-npm e2e:ios:test or yarn e2e:ios:test // similar command for android as well
+yarn e2e:ios:build
+yarn e2e:ios:test // similar command for android as well
 ```
 
 -**Note:** Please make sure to check 'device' in  .detox.js, if you do not same simulators, please change.
