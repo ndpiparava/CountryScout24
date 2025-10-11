@@ -3,7 +3,6 @@ module.exports = {
   extends: [
     'universe',
     'universe/shared/typescript-analysis',
-    'plugin:react-hooks/recommended',
     'prettier',
     'plugin:prettier/recommended',
     'plugin:import/recommended',
@@ -18,7 +17,7 @@ module.exports = {
     },
   ],
   //plugins: ['@typescript-eslint'],
-  plugins: ['react', 'react-hooks', 'prettier'],
+  plugins: ['react', 'prettier'],
   settings: {
     'import/resolver': {
       typescript: {}, // this loads <rootdir>/tsconfig.json to ESLint
@@ -35,6 +34,24 @@ module.exports = {
     'scripts/',
     'coverage/',
     'vendor/',
+    'android/app/build/',
+    'ios/build/Build',
+    'node_modules/',
+  ],
+  overrides: [
+    {
+      files: ['e2e/**/*.ts'],
+      rules: {
+        '@typescript-eslint/await-thenable': 'off',
+        '@typescript-eslint/no-confusing-void-expression': 'off',
+      },
+    },
+    {
+      parserOptions: {
+        project: './tsconfig.json',
+      },
+      files: ['*.ts', '*.tsx', '*.d.ts', '*.mock.ts'],
+    },
   ],
   rules: {
     'import/order': ['error'],

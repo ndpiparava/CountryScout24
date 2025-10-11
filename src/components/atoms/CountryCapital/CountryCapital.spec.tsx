@@ -1,7 +1,9 @@
-import React from 'react';
 import {render} from '@testing-library/react-native';
-import CountryCapital from './index';
+import React from 'react';
+
 import {MockAppContainer} from '@CountryScout24/__specs__/mocks/MockAppContainer';
+
+import CountryCapital from './index';
 
 describe('CountryCapital Component', () => {
   it('renders correctly with given capital', () => {

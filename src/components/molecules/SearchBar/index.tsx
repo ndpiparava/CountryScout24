@@ -1,8 +1,9 @@
+import styled from '@emotion/native';
 import React from 'react';
 import {TextInput, TextInputProps, Pressable} from 'react-native';
-import styled from '@emotion/native';
-import {SearchIcon} from '@CountryScout24/assets/svgs/SearchIcon';
+
 import {CloseIcon} from '@CountryScout24/assets/svgs/CloseIcon';
+import {SearchIcon} from '@CountryScout24/assets/svgs/SearchIcon';
 
 type SearchBarProps = TextInputProps & {
   value: string;
@@ -21,7 +22,9 @@ const SearchBar: React.FC<SearchBarProps> = ({
   clearButtonTestID,
   ...rest
 }) => {
-  const clearText = () => onChangeText('');
+  const clearText = () => {
+    onChangeText('');
+  };
 
   return (
     <Wrapper testID={testID}>

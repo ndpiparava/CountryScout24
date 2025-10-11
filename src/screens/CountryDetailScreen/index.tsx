@@ -1,15 +1,16 @@
-import React from 'react';
 import styled from '@emotion/native';
-
-import CountryFlag from '@CountryScout24/components/atoms/CountryFlag';
+import {MotiView} from 'moti';
+import React from 'react';
 import {Dimensions, ScrollView} from 'react-native';
-import InfoRow from '@CountryScout24/components/atoms/InfoRow';
+
+import {TEST_IDS} from '@CountryScout24/__specs__/testIDs';
 import {PopulationIcon} from '@CountryScout24/assets/svgs/PopulationSvg';
 import {RulerIcon} from '@CountryScout24/assets/svgs/RulerSvg';
+import CountryFlag from '@CountryScout24/components/atoms/CountryFlag';
+import InfoRow from '@CountryScout24/components/atoms/InfoRow';
 import {DetailScreenAnimation} from '@CountryScout24/utils/animation';
-import {MotiView} from 'moti';
+
 import useCountryDetailScreen from './useCountryDetailScreen';
-import {TEST_IDS} from '@CountryScout24/__specs__/testIDs';
 
 const FLAG_SIZE = Dimensions.get('window').width * 0.8;
 
@@ -20,13 +21,11 @@ const CountryDetailScreen = () => {
     <Container testID={TEST_IDS.COUNTRY_DETAIL_SCREEN}>
       <ScrollView
         contentContainerStyle={{paddingVertical: 32, paddingHorizontal: 24}}
-        showsVerticalScrollIndicator={false}
-      >
+        showsVerticalScrollIndicator={false}>
         <MotiView
           from={DetailScreenAnimation.from}
           animate={DetailScreenAnimation.animate}
-          transition={DetailScreenAnimation.transition}
-        >
+          transition={DetailScreenAnimation.transition}>
           <Centered testID={TEST_IDS.COUNTRY_DETAIL_SECTION}>
             <FlagWrapper size={FLAG_SIZE}>
               <CountryFlag src={country.flagUrl} size={FLAG_SIZE} />

@@ -5,6 +5,7 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
+    "ios:clean": "xcrun simctl shutdown all && xcodebuild clean -workspace ios/CountryScout24.xcworkspace -scheme CountryScout24",
     "start": "react-native start",
     "test": "jest",
     "postinstall": "patch-package",
@@ -15,7 +16,7 @@
     "e2e:ios:build": "detox rebuild-framework-cache && detox build -c ios.sim.debug",
     "e2e:ios:test": "sh -c 'yarn start & sleep 8 && detox test -c ios.sim.debug'",
     "e2e:android:build": "detox rebuild-framework-cache && detox build -c android.emu.debug",
-    "e2e:android:test": "sh -c 'yarn start & sleep 8 && detox test -c android.emu.debug"
+    "e2e:android:test": "sh -c 'yarn start & sleep 8 && detox test -c android.emu.debug'"
   },
   "dependencies": {
     "@emotion/native": "^11.11.0",
@@ -30,8 +31,6 @@
     "add": "^2.0.6",
     "axios": "^1.12.2",
     "lodash": "^4.17.21",
-    "lottie-ios": "4.5.0",
-    "lottie-react-native": "^7.3.4",
     "moti": "^0.30.0",
     "react": "19.1.0",
     "react-intl": "^7.1.13",
@@ -97,5 +96,6 @@
   },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "packageManager": "yarn@4.6.0"
 }

@@ -1,11 +1,12 @@
-import ErrorMessage from '@CountryScout24/components/atoms/ErrorMessage';
-import CountryList from '@CountryScout24/components/organisms/CountryList';
 import styled from '@emotion/native';
-
 import React from 'react';
-import useCountryScreen from './useCountryScreen';
-import SearchBar from '@CountryScout24/components/molecules/SearchBar';
+
 import {TEST_IDS} from '@CountryScout24/__specs__/testIDs';
+import ErrorMessage from '@CountryScout24/components/atoms/ErrorMessage';
+import SearchBar from '@CountryScout24/components/molecules/SearchBar';
+import CountryList from '@CountryScout24/components/organisms/CountryList';
+
+import useCountryScreen from './useCountryScreen';
 
 const CountriesScreen = () => {
   const {isError, isLoading, intl, data, onSelectCountry, query, setQuery} =

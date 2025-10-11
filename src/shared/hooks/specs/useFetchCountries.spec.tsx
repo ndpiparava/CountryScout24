@@ -1,25 +1,23 @@
+import {useQuery} from '@tanstack/react-query';
+import {renderHook} from '@testing-library/react-native';
 
-import { renderHook } from '@testing-library/react-native';
-import { useQuery } from '@tanstack/react-query';
-import { useFetchCountries } from '../useFetchCountries';
+import {useFetchCountries} from '../useFetchCountries';
 
 jest.mock('@tanstack/react-query', () => ({
   useQuery: jest.fn(),
 }));
 
 const mockData = [
-    {
-      name: 'France',
-      capital: 'Paris',
-      flagUrl: 'fr.png',
-      population: 67000000,
-      area: 640000,
-    },
-  ];
-
+  {
+    name: 'France',
+    capital: 'Paris',
+    flagUrl: 'fr.png',
+    population: 67000000,
+    area: 640000,
+  },
+];
 
 describe('useFetchCountries', () => {
-
   beforeEach(() => {
     jest.clearAllMocks();
   });
@@ -34,7 +32,7 @@ describe('useFetchCountries', () => {
       error: null,
     });
 
-    const { result } = renderHook(() => useFetchCountries());
+    const {result} = renderHook(() => useFetchCountries());
 
     expect(result.current.isSuccess).toBe(true);
     expect(result.current.data).toEqual(mockData);
@@ -49,7 +47,7 @@ describe('useFetchCountries', () => {
       error: new Error('Network error'),
     });
 
-    const { result } = renderHook(() => useFetchCountries());
+    const {result} = renderHook(() => useFetchCountries());
 
     expect(result.current.isError).toBe(true);
     expect(result.current.error).toEqual(new Error('Network error'));

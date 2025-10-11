@@ -9,5 +9,5 @@ module.exports = {
     'jest-runner',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  testPathIgnorePatterns: ['/node_modules/', '/e2e/']
+  testPathIgnorePatterns: ['/node_modules/', '/e2e/'],
 };

@@ -1,11 +1,12 @@
+import {ThemeProvider} from '@emotion/react';
 import {QueryClient, QueryClientProvider} from '@tanstack/react-query';
 import React from 'react';
 import {IntlProvider} from 'react-intl';
-import {useLocaleStore} from './stores/useLocaleStore';
-import {ThemeProvider} from '@emotion/react';
-import {translations} from './translations';
-import {theme} from './themes';
+
 import AppWrapper from './AppWrapper';
+import {useLocaleStore} from './stores/useLocaleStore';
+import {theme} from './themes';
+import {translations} from './translations';
 
 const queryClient = new QueryClient();
 

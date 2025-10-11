@@ -1,9 +1,11 @@
 // src/components/molecules/CountryItem/CountryItem.spec.tsx
-import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
-import CountryItem from './index';
+import React from 'react';
+
 import {MockAppContainer} from '@CountryScout24/__specs__/mocks/MockAppContainer';
 import {Country} from '@CountryScout24/domain/country';
+
+import CountryItem from './index';
 
 const COUNTRY_ITEM_TEST_ID = 'COUNTRY_ITEM_TEST_ID';
 const COUNTRY_FLAG_TEST_ID = 'COUNTRY_FLAG_TEST_ID';

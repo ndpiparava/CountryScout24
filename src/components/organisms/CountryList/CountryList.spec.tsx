@@ -1,9 +1,11 @@
-import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
-import CountryList from './index';
+import React from 'react';
+
 import {MockAppContainer} from '@CountryScout24/__specs__/mocks/MockAppContainer';
 import {TEST_IDS} from '@CountryScout24/__specs__/testIDs';
 import {Country} from '@CountryScout24/domain/country';
+
+import CountryList from './index';
 
 const mockCountries: Country[] = [
   {

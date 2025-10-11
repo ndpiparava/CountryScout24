@@ -1,13 +1,15 @@
+import {render} from '@testing-library/react-native';
+
+import {MockAppContainer} from '@CountryScout24/__specs__/mocks/MockAppContainer';
+import {TEST_IDS} from '@CountryScout24/__specs__/testIDs';
+
+import useCountryDetailScreen from './useCountryDetailScreen';
+import CountryDetailScreen from '../CountryDetailScreen';
+
 jest.mock('./useCountryDetailScreen', () => ({
   __esModule: true,
   default: jest.fn(),
 }));
-
-import { render } from '@testing-library/react-native';
-import useCountryDetailScreen from './useCountryDetailScreen';
-import CountryDetailScreen from '../CountryDetailScreen';
-import { TEST_IDS } from '@CountryScout24/__specs__/testIDs';
-import { MockAppContainer } from '@CountryScout24/__specs__/mocks/MockAppContainer';
 
 const mockCountry = {
   name: 'France',
@@ -18,7 +20,7 @@ const mockCountry = {
 };
 
 const mockIntl = {
-  formatMessage: jest.fn(({ id }) => id),
+  formatMessage: jest.fn(({id}) => id),
 };
 
 describe('CountryDetailScreen', () => {
@@ -31,7 +33,12 @@ describe('CountryDetailScreen', () => {
   });
 
   it('renders all country details correctly', () => {
-    const { getByText, getByTestId } = render(<MockAppContainer> <CountryDetailScreen /></MockAppContainer>);
+    const {getByText, getByTestId} = render(
+      <MockAppContainer>
+        {' '}
+        <CountryDetailScreen />
+      </MockAppContainer>,
+    );
 
     expect(getByTestId(TEST_IDS.COUNTRY_DETAIL_SCREEN)).toBeTruthy();
     expect(getByText(mockCountry.name)).toBeTruthy();

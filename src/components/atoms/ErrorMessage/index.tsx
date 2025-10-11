@@ -1,7 +1,8 @@
-import React from 'react';
 import styled from '@emotion/native';
-import {noop} from '@CountryScout24/utils/common';
+import React from 'react';
+
 import RetryIcon from '@CountryScout24/assets/svgs/RetryIcon';
+import {noop} from '@CountryScout24/utils/common';
 
 type ErrorMessageProps = {
   message: string;

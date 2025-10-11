@@ -1,7 +1,7 @@
-import React from 'react';
-import {ActivityIndicator} from 'react-native';
 import styled from '@emotion/native';
 import {useTheme} from '@emotion/react';
+import React from 'react';
+import {ActivityIndicator} from 'react-native';
 
 type LoadingProps = {
   message?: string;

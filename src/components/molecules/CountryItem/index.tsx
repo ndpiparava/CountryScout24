@@ -1,13 +1,13 @@
-import React, {memo} from 'react';
-import {MotiView} from 'moti';
 import styled from '@emotion/native';
-import {Country} from '@CountryScout24/domain/country';
-import CountryFlag from '@CountryScout24/components/atoms/CountryFlag';
-
-import CountryName from '@CountryScout24/components/atoms/CountryName';
-import CountryCapital from '@CountryScout24/components/atoms/CountryCapital';
-import ArrowRight from '@CountryScout24/assets/svgs/ArrowRight';
+import {MotiView} from 'moti';
+import React, {memo} from 'react';
 import {Pressable} from 'react-native';
+
+import ArrowRight from '@CountryScout24/assets/svgs/ArrowRight';
+import CountryCapital from '@CountryScout24/components/atoms/CountryCapital';
+import CountryFlag from '@CountryScout24/components/atoms/CountryFlag';
+import CountryName from '@CountryScout24/components/atoms/CountryName';
+import {Country} from '@CountryScout24/domain/country';
 import {ListItemAnimation} from '@CountryScout24/utils/animation';
 
 type CountryItemProps = {
@@ -24,13 +24,16 @@ const CountryItem = ({
   flagTestID,
 }: CountryItemProps) => {
   return (
-    <Pressable onPress={() => onSelect(country)} testID={testID}>
+    <Pressable
+      onPress={() => {
+        onSelect(country);
+      }}
+      testID={testID}>
       {({pressed}) => (
         <AnimatedItemWrapper
-         from={{ ...ListItemAnimation.from, scale: 0.9 }} 
-  animate={{ ...ListItemAnimation.animate, scale: pressed ? 0.74 : 1 }} 
-  transition={ListItemAnimation.transition}
-        >
+          from={{...ListItemAnimation.from, scale: 0.9}}
+          animate={{...ListItemAnimation.animate, scale: pressed ? 0.74 : 1}}
+          transition={ListItemAnimation.transition}>
           <Left>
             <CountryFlag src={country.flagUrl} testID={flagTestID} />
           </Left>

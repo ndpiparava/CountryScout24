@@ -1,7 +1,9 @@
-import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
-import ErrorMessage from './index';
+import React from 'react';
+
 import {MockAppContainer} from '@CountryScout24/__specs__/mocks/MockAppContainer';
+
+import ErrorMessage from './index';
 
 const RETRY_BUTTON_TEST_ID = 'retry-button';
 

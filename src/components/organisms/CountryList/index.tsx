@@ -1,10 +1,11 @@
+import styled from '@emotion/native';
 import React, {memo, useCallback} from 'react';
 import {FlatList} from 'react-native';
+
+import {TEST_IDS} from '@CountryScout24/__specs__/testIDs';
+import Loading from '@CountryScout24/components/atoms/Loading/Index';
 import CountryItem from '@CountryScout24/components/molecules/CountryItem';
 import {Country} from '@CountryScout24/domain/country';
-import styled from '@emotion/native';
-import Loading from '@CountryScout24/components/atoms/Loading/Index';
-import {TEST_IDS} from '@CountryScout24/__specs__/testIDs';
 
 type CountryListProps = {
   data: Country[];
@@ -31,6 +32,17 @@ const CountryList: React.FC<CountryListProps> = ({
     }
   }, []);
 
+  const renderCountryItem = useCallback(
+    ({item}: {item: Country}) => (
+      <CountryItem
+        country={item}
+        onSelect={handleSelectCountry}
+        testID={TEST_IDS.COUNTRY_ITEM_ID(item.name)}
+      />
+    ),
+    [handleSelectCountry],
+  );
+
   const renderEmptyMessage = useCallback(() => {
     if (!isLoading) {
       return (
@@ -47,13 +59,7 @@ const CountryList: React.FC<CountryListProps> = ({
       data={data}
       testID={testID}
       keyExtractor={item => item.name}
-      renderItem={({item}) => (
-        <CountryItem
-          country={item}
-          onSelect={handleSelectCountry}
-          testID={TEST_IDS.COUNTRY_ITEM_ID(item.name)}
-        />
-      )}
+      renderItem={renderCountryItem}
       refreshing={isLoading}
       horizontal={false}
       showsHorizontalScrollIndicator={false}

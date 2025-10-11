@@ -20,7 +20,8 @@ export const useLocaleStore = create<LocaleStateType>((set, get) => ({
       const data = await response.json();
       set({language: data.language});
     } catch (error) {
-      console.error('Error fetching language:', error);
+      //TODO: Add logging
+      //console.error('Error fetching language:', error);
     }
   },
 }));

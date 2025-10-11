@@ -7,3 +7,6 @@ coverage/
 jest.config.js
 
 vendor/
+android/app/build/
+ios/build/Build/
+node_modules/

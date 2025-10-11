@@ -1,10 +1,11 @@
 // mockState.ts
 
+import {merge} from 'lodash';
+
 import {
   LocaleStateType,
   useLocaleStore,
 } from '@CountryScout24/stores/useLocaleStore';
-import {merge} from 'lodash';
 
 export interface AppState {
   locale: Partial<LocaleStateType>;

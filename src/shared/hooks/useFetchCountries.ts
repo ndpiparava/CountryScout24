@@ -1,5 +1,6 @@
-import {CountryService} from '@CountryScout24/services';
 import {useQuery} from '@tanstack/react-query';
+
+import {CountryService} from '@CountryScout24/services';
 
 const countryService = new CountryService();
 
@@ -16,6 +17,6 @@ export const useFetchCountries = () => {
 
   return {
     ...result,
-    data: result.data || [],
+    data: result.data ?? [],
   };
 };

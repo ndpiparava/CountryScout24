@@ -1,6 +1,7 @@
+import axios from 'axios';
+
 import {Country} from '@CountryScout24/domain/country';
 import {env} from '@CountryScout24/utils/env';
-import axios from 'axios';
 
 export class CountryService {
   async getEuropeanCountries(): Promise<Country[]> {

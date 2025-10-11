@@ -1,0 +1,6 @@
+scripts/
+coverage/
+vendor/
+android/app/build/
+ios/build/Build/
+node_modules/

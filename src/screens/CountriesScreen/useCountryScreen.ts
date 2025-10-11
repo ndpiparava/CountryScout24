@@ -1,10 +1,11 @@
+import {useMemo, useState} from 'react';
+import {useIntl} from 'react-intl';
+
+import {Country} from '@CountryScout24/domain/country';
 import {useFetchCountries} from '@CountryScout24/shared/hooks/useFetchCountries';
 import useTypedNavigation from '@CountryScout24/shared/hooks/useTypedNavigation';
 
 import {AppStackParamList, Screen} from '../screen';
-import {Country} from '@CountryScout24/domain/country';
-import {useIntl} from 'react-intl';
-import {useMemo, useState} from 'react';
 
 const useCountryScreen = () => {
   const [query, setQuery] = useState('');
@@ -24,7 +25,7 @@ const useCountryScreen = () => {
   }, [query, data]);
 
   return {
-    data: filteredData || data,
+    data: filteredData,
     isLoading,
     isError,
     onSelectCountry,

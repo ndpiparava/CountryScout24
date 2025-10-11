@@ -1,9 +1,10 @@
+import styled from '@emotion/native';
+import {useTheme} from '@emotion/react';
 import {DefaultTheme, NavigationContainer} from '@react-navigation/native';
 import React from 'react';
 import {StatusBar} from 'react-native';
+
 import AppStack from './appstack';
-import styled from '@emotion/native';
-import {useTheme} from '@emotion/react';
 
 function AppWrapper(): React.JSX.Element {
   const theme = useTheme();
@@ -17,8 +18,7 @@ function AppWrapper(): React.JSX.Element {
             ...DefaultTheme.colors,
             background: theme.colors.backgroundPrimary,
           },
-        }}
-      >
+        }}>
         <AppStack />
       </NavigationContainer>
     </RootWrapper>

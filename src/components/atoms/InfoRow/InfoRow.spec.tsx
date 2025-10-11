@@ -1,9 +1,11 @@
 // src/components/molecules/InfoRow/InfoRow.spec.tsx
-import React from 'react';
 import {render} from '@testing-library/react-native';
-import InfoRow from './index';
-import {MockAppContainer} from '@CountryScout24/__specs__/mocks/MockAppContainer';
+import React from 'react';
 import {Text} from 'react-native';
+
+import {MockAppContainer} from '@CountryScout24/__specs__/mocks/MockAppContainer';
+
+import InfoRow from './index';
 
 describe('InfoRow Component', () => {
   const renderComponent = (props = {}) => {

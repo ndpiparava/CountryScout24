@@ -1,8 +1,10 @@
 // src/components/molecules/SearchBar/SearchBar.spec.tsx
-import React from 'react';
 import {render, fireEvent} from '@testing-library/react-native';
-import SearchBar from './index';
+import React from 'react';
+
 import {MockAppContainer} from '@CountryScout24/__specs__/mocks/MockAppContainer';
+
+import SearchBar from './index';
 
 const SEARCH_BAR_TEST_ID = 'SEARCH_BAR_TEST_ID';
 const SEARCH_INPUT_TEST_ID = 'SEARCH_INPUT_TEST_ID';

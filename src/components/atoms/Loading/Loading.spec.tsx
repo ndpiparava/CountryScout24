@@ -1,9 +1,11 @@
 // src/components/atoms/Loading/Loading.spec.tsx
-import React from 'react';
 import {render} from '@testing-library/react-native';
-import Loading from './Index';
-import {MockAppContainer} from '@CountryScout24/__specs__/mocks/MockAppContainer';
+import React from 'react';
 import {ActivityIndicator} from 'react-native';
+
+import {MockAppContainer} from '@CountryScout24/__specs__/mocks/MockAppContainer';
+
+import Loading from './Index';
 
 const LOADING_TEST_ID = 'LOADING_TEST_ID';
 

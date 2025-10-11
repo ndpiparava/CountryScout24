@@ -6,7 +6,6 @@
 
 ## Project Structure
 
-
 - **src/components/** – Organized using Atomic Design:
   - **atoms/** – Basic UI elements like `CountryCapital`, `CountryFlag`.
   - **molecules/** – Composed components like `CountryItem`, `SearchBar`.
@@ -22,12 +21,12 @@
 - **src/services/** – APIs, Database, `Repositories`.
 - **e2e/** – End to end tests.
 
-
-
 ---
+
 ## Prerequites
 
-### Yarn 4.6.0 or greater
+- [Yarn 4.6.0](https://yarnpkg.com/getting-started/install)
+- [Environment setup](https://reactnative.dev/docs/set-up-your-environment)
 
 ### Detox setup for E2E tests
 
@@ -42,7 +41,6 @@ brew install applesimutils
 ## Getting Started
 
 ### Install dependencies
-
 
 ```bash
 yarn install
@@ -76,17 +74,18 @@ yarn test
 ```
 
 ### Run End to End tests
+
 ```bash
 yarn e2e:ios:build
 yarn e2e:ios:test // similar command for android as well
 ```
 
--**Note:** Please make sure to check 'device' in  .detox.js, if you do not same simulators, please change.
-
+-**Note:** Please make sure to check 'device' in .detox.js, if you do not same simulators, please change.
 
 ## Features
 
 ### Clean Architecture
+
 It separates your app into layers that depend on each other in one direction only — from outer to inner.
 It typically looks like this:
 
@@ -96,7 +95,6 @@ It typically looks like this:
 - Domain Layer ← Entities, Use Cases (pure JS logic)
 - Data Layer (Infra) ← APIs, Database, Repositories
 ```
-          
 
 ### Atomic Design
 
@@ -127,7 +125,7 @@ const Capital = styled.Text`
 
 ```ts
 const intl = useIntl();
-<label>{intl.formatMessage({ id: 'form.propertyType.label' })}</label>
+<label>{intl.formatMessage({id: 'form.propertyType.label'})}</label>;
 ```
 
 ### Theme Provider Wrapper
@@ -138,6 +136,7 @@ const intl = useIntl();
 ---
 
 ## Learn More
+
 - [React Native Documentation](https://emotion.sh/docs/introduction) - learn about react-native
 - [Detox Documentation](https://wix.github.io/Detox/docs/introduction/getting-started) – learn about Detox features a
 - [React Intl Documentation](https://formatjs.io/docs/react-intl/) – learn about localization and formatting.

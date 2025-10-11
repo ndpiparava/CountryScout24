@@ -10,8 +10,8 @@ type CountryFlagProps = {
 const DEFAULT_IMAGE_SIZE = 50;
 
 const CountryFlag = ({src, size, testID}: CountryFlagProps) => {
-  const width = size || DEFAULT_IMAGE_SIZE;
-  const height = (size || DEFAULT_IMAGE_SIZE) * 0.6;
+  const width = size ?? DEFAULT_IMAGE_SIZE;
+  const height = (size ?? DEFAULT_IMAGE_SIZE) * 0.6;
   return (
     <FlagImg
       source={{uri: src}}

@@ -1,6 +1,7 @@
 import {RouteProp, useRoute} from '@react-navigation/native';
-import {AppStackParamList, Screen} from '../screen';
 import {useIntl} from 'react-intl';
+
+import {AppStackParamList, Screen} from '../screen';
 
 const useCountryDetailScreen = () => {
   const route =

@@ -1,7 +1,9 @@
-import React from 'react';
 import {render} from '@testing-library/react-native';
-import CountryFlag from './index';
+import React from 'react';
+
 import {MockAppContainer} from '@CountryScout24/__specs__/mocks/MockAppContainer';
+
+import CountryFlag from './index';
 
 const COUNTRY_FLAG_IMAGE_TEST_ID = 'COUNTRY_FLAG_IMAGE_TEST_ID';
 

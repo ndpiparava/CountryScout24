@@ -3362,11 +3362,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:*, @types/node@npm:^24.7.1":
-  version: 24.7.1
-  resolution: "@types/node@npm:24.7.1"
+  version: 24.7.2
+  resolution: "@types/node@npm:24.7.2"
   dependencies:
     undici-types: "npm:~7.14.0"
-  checksum: 10c0/2525f2aa865d78b1c75faaf8c6bf2af51c930962d8078306620d9a76eafcbbea035142cf2cdc2fcf1b4010cd3958a1c6c59b67aba1ac205dc1e5f895ef6af673
+  checksum: 10c0/03f662f10e4b89bc97016e067101cbabe55025b54c24afb581fb50992d5eeaaf417bdae34bbc668ae8759d3cdbbbadf35fc8b9b29d26f52ede2525d48e919e49
   languageName: node
   linkType: hard
 
@@ -4001,8 +4001,6 @@ __metadata:
     eslint-plugin-standard: "npm:^5.0.0"
     jest: "npm:^29.6.3"
     lodash: "npm:^4.17.21"
-    lottie-ios: "npm:4.5.0"
-    lottie-react-native: "npm:^7.3.4"
     metro-react-native-babel-preset: "npm:^0.77.0"
     moti: "npm:^0.30.0"
     nock: "npm:^14.0.10"
@@ -4921,9 +4919,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.30001746":
-  version: 1.0.30001749
-  resolution: "caniuse-lite@npm:1.0.30001749"
-  checksum: 10c0/f5100599361be03e93cae1f38380fdb78b477b573cb27f8aaf8ed8461ac0233ea84c7e127f441ca0a82ff23f4c37a8855b7c6a02e79d70769a786550bc1be69e
+  version: 1.0.30001750
+  resolution: "caniuse-lite@npm:1.0.30001750"
+  checksum: 10c0/aa77ebf264ca8dcfe913fadaa19f06bf839d65dec24498fdb9c45739ab0828b8275ca30c698f4ee86829d38264eaa461edf4577e407753da8205ab1d285e105d
   languageName: node
   linkType: hard
 
@@ -6697,9 +6695,9 @@ __metadata:
   linkType: hard
 
 "exponential-backoff@npm:^3.1.1":
-  version: 3.1.2
-  resolution: "exponential-backoff@npm:3.1.2"
-  checksum: 10c0/d9d3e1eafa21b78464297df91f1776f7fbaa3d5e3f7f0995648ca5b89c069d17055033817348d9f4a43d1c20b0eab84f75af6991751e839df53e4dfd6f22e844
+  version: 3.1.3
+  resolution: "exponential-backoff@npm:3.1.3"
+  checksum: 10c0/77e3ae682b7b1f4972f563c6dbcd2b0d54ac679e62d5d32f3e5085feba20483cf28bd505543f520e287a56d4d55a28d7874299941faf637e779a1aa5994d1267
   languageName: node
   linkType: hard
 
@@ -9107,30 +9105,6 @@ __metadata:
   bin:
     loose-envify: cli.js
   checksum: 10c0/655d110220983c1a4b9c0c679a2e8016d4b67f6e9c7b5435ff5979ecdb20d0813f4dec0a08674fcbdd4846a3f07edbb50a36811fd37930b94aaa0d9daceb017e
-  languageName: node
-  linkType: hard
-
-"lottie-ios@npm:4.5.0":
-  version: 4.5.0
-  resolution: "lottie-ios@npm:4.5.0"
-  checksum: 10c0/5952324ea68303500dd9e79e04c25284f372a226b85a5bea09f96df0c136453c22ed0c3fa04a2ac9bce24dea125b69ec9328f75d7e79ea7dbe38652c230f1c23
-  languageName: node
-  linkType: hard
-
-"lottie-react-native@npm:^7.3.4":
-  version: 7.3.4
-  resolution: "lottie-react-native@npm:7.3.4"
-  peerDependencies:
-    "@lottiefiles/dotlottie-react": ^0.13.5
-    react: "*"
-    react-native: ">=0.46"
-    react-native-windows: ">=0.63.x"
-  peerDependenciesMeta:
-    "@lottiefiles/dotlottie-react":
-      optional: true
-    react-native-windows:
-      optional: true
-  checksum: 10c0/e91e24e3ff36200db068de1d8f14757adc412e0ce71209cde29f1f594b50307ff28342dcfb5b5995d509e0a9f78b9e6a1ab0e414b27bba94e6d99b175658168c
   languageName: node
   linkType: hard
 
@@ -12602,11 +12576,11 @@ __metadata:
   linkType: hard
 
 "use-latest-callback@npm:^0.2.4":
-  version: 0.2.5
-  resolution: "use-latest-callback@npm:0.2.5"
+  version: 0.2.6
+  resolution: "use-latest-callback@npm:0.2.6"
   peerDependencies:
     react: ">=16.8"
-  checksum: 10c0/c70104d345fd0243eb90c813283c94234e99530086a2787d66e3ad8b0a8564a4c168d700b7f9602192a32087a8226eb6c85f450d91d9ecba1808a4e32a700f1b
+  checksum: 10c0/6523747b2d76f12a91cf80a3cd9803449571e9defa8db69e9a03b8199b211127d88c038063714fe31d3c2e63ca51a491bd05f4e34203795a1c692a5a44416610
   languageName: node
   linkType: hard
 

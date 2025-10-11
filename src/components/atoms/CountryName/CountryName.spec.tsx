@@ -1,8 +1,10 @@
 // src/components/atoms/CountryName/CountryName.spec.tsx
-import React from 'react';
 import {render} from '@testing-library/react-native';
-import CountryName from './index';
+import React from 'react';
+
 import {MockAppContainer} from '@CountryScout24/__specs__/mocks/MockAppContainer';
+
+import CountryName from './index';
 
 const renderComponent = (props = {}) => {
   const defaultProps = {
