@@ -4,6 +4,7 @@ import {TextInput, TextInputProps, Pressable} from 'react-native';
 
 import {CloseIcon} from '@CountryScout24/assets/svgs/CloseIcon';
 import {SearchIcon} from '@CountryScout24/assets/svgs/SearchIcon';
+import { useTheme } from '@emotion/react';
 
 type SearchBarProps = TextInputProps & {
   value: string;
@@ -22,6 +23,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
   clearButtonTestID,
   ...rest
 }) => {
+  const theme = useTheme();
   const clearText = () => {
     onChangeText('');
   };
@@ -36,6 +38,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
         testID={searchInputTestID}
         placeholder={placeholder ?? 'Search...'}
         value={value}
+        placeholderTextColor={theme.colors.textSecondary}
         onChangeText={onChangeText}
         {...rest}
       />
