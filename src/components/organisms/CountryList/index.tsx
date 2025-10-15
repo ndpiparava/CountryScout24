@@ -17,6 +17,8 @@ type CountryListProps = {
   noCountryTestID?: string;
 };
 
+const INITIAL_NUM_TO_RENDER = 20;
+
 const CountryList: React.FC<CountryListProps> = ({
   data = [],
   isLoading = false,
@@ -67,6 +69,8 @@ const CountryList: React.FC<CountryListProps> = ({
       ListFooterComponent={isLoading ? <Loading /> : null}
       ListEmptyComponent={renderEmptyMessage()}
       alwaysBounceVertical={false}
+      initialNumToRender={INITIAL_NUM_TO_RENDER}
+      maxToRenderPerBatch={INITIAL_NUM_TO_RENDER}
     />
   );
 };

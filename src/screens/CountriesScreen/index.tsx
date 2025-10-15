@@ -9,7 +9,7 @@ import CountryList from '@CountryScout24/components/organisms/CountryList';
 import useCountryScreen from './useCountryScreen';
 
 const CountriesScreen = () => {
-  const {isError, isLoading, intl, data, onSelectCountry, query, setQuery} =
+  const {isError, isLoading, intl, data, onSelectCountry, query, handleSearch} =
     useCountryScreen();
 
   if (isError) {
@@ -28,7 +28,7 @@ const CountriesScreen = () => {
       <SearchWrapper>
         <SearchBar
           value={query}
-          onChangeText={setQuery}
+          onChangeText={handleSearch}
           placeholder="Search countries..."
           testID={TEST_IDS.SEARCH_BAR}
           searchInputTestID={TEST_IDS.SEARCH_INPUT}
