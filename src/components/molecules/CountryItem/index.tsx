@@ -28,12 +28,14 @@ const CountryItem = ({
       onPress={() => {
         onSelect(country);
       }}
-      testID={testID}>
+      testID={testID}
+    >
       {({pressed}) => (
         <AnimatedItemWrapper
           from={{...ListItemAnimation.from, scale: 0.9}}
           animate={{...ListItemAnimation.animate, scale: pressed ? 0.74 : 1}}
-          transition={ListItemAnimation.transition}>
+          transition={ListItemAnimation.transition}
+        >
           <Left>
             <CountryFlag src={country.flagUrl} testID={flagTestID} />
           </Left>

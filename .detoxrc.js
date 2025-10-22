@@ -83,5 +83,14 @@ module.exports = {
       device: 'emulator',
       app: 'android.release',
     },
+  'android.browserstack': {
+    device: 'emulator', // placeholder, BrowserStack will override
+    app: 'android.release',
+    session: {
+      server: 'wss://detox.browserstack.com/init',
+      user: process.env.BROWSERSTACK_USERNAME,
+      key: process.env.BROWSERSTACK_ACCESS_KEY,
+    },
+  },
   },
 };

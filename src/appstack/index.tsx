@@ -20,7 +20,8 @@ const AppStack = () => {
         headerShown: true,
         headerStyle: {backgroundColor: theme.colors.backgroundPrimary},
         headerTintColor: theme.colors.textSecondary,
-      }}>
+      }}
+    >
       <NavigationStack.Screen
         name={Screen.CountriesScreen}
         component={CountriesScreen}

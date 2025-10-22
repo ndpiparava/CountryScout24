@@ -18,7 +18,8 @@ function AppWrapper(): React.JSX.Element {
             ...DefaultTheme.colors,
             background: theme.colors.backgroundPrimary,
           },
-        }}>
+        }}
+      >
         <AppStack />
       </NavigationContainer>
     </RootWrapper>

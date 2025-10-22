@@ -1,0 +1,70 @@
+name: E2E Tests on BrowserStack
+
+on:
+  workflow_dispatch:
+        inputs:
+            environment:
+                description: 'Select the environment'
+                required: true
+                type: choice
+                options:
+                    - dev
+                    - int
+                    - prod
+env:
+  BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+  BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+
+jobs:
+  browserstack-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      
+      - name: Enable Corepack (for Yarn 4)
+        run: |
+          corepack enable
+          corepack prepare yarn@4.6.0 --activate
+          yarn --version
+
+      - name: Install Dependencies
+        run: yarn install --immutable
+
+      # - name: Override Detox with BrowserStack version
+      #   run: yarn add -D npm:@browserstack/detox@20.38.0-cloud.1
+
+      - name: Bundle React Native JS
+        run: |
+         mkdir -p android/app/src/main/assets
+          yarn react-native bundle \
+          --platform android \
+          --dev false \
+          --entry-file index.js \
+          --bundle-output android/app/src/main/assets/index.android.bundle \
+          --assets-dest android/app/src/main/res
+
+      - name: Build App (Android Debug)
+        run: cd android && ./gradlew assembleDebug # replace with ios if needed
+
+      - name: Upload APK to BrowserStack
+        env:
+          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+        run: |
+          APP_URL=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" \
+            -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
+            -F "file=@android/app/build/outputs/apk/release/app-release.apk" | jq -r '.app_url')
+          echo "APP_URL=$APP_URL" >> $GITHUB_ENV
+
+      - name: Run Detox tests on BrowserStack
+        env:
+          BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+          BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+        run: npx detox test --configuration android.browserstack --headless

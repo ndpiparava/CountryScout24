@@ -21,11 +21,13 @@ const CountryDetailScreen = () => {
     <Container testID={TEST_IDS.COUNTRY_DETAIL_SCREEN}>
       <ScrollView
         contentContainerStyle={{paddingVertical: 32, paddingHorizontal: 24}}
-        showsVerticalScrollIndicator={false}>
+        showsVerticalScrollIndicator={false}
+      >
         <MotiView
           from={DetailScreenAnimation.from}
           animate={DetailScreenAnimation.animate}
-          transition={DetailScreenAnimation.transition}>
+          transition={DetailScreenAnimation.transition}
+        >
           <Centered testID={TEST_IDS.COUNTRY_DETAIL_SECTION}>
             <FlagWrapper size={FLAG_SIZE}>
               <CountryFlag src={country.flagUrl} size={FLAG_SIZE} />
