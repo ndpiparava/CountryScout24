@@ -61,7 +61,13 @@ jobs:
           APP_URL=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" \
             -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
             -F "file=@android/app/build/outputs/apk/release/app-release.apk" | jq -r '.app_url')
+
+           TEST_URL=$(curl -u "$BROWSERSTACK_USERNAME:$BROWSERSTACK_ACCESS_KEY" \
+          -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
+          -F "file=@android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk" | jq -r '.app_url')
+
           echo "APP_URL=$APP_URL" >> $GITHUB_ENV
+          echo "TEST_URL=$TEST_URL" >> $GITHUB_ENV
 
       - name: Run Detox tests on BrowserStack
         env:
